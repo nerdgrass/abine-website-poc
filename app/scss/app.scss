@@ -1,3 +1,4 @@
+@import "variables";
 @import "normalize";
 @import "settings";
 
@@ -40,3 +41,289 @@
   "foundation/components/type",
   "foundation/components/offcanvas",
   "foundation/components/visibility";
+
+
+// Page layout
+section {
+  padding: 3em 0;
+}
+#splashInside {
+  background: url('../images/splashPattern.jpg');
+  padding-top: 2.5em;
+  padding-bottom: 0em; 
+}
+
+// Nav
+.nav-link {
+  margin-top: .7em !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 11px !important;
+
+  &:hover {
+    color: $lighterBlue !important;
+  }
+}
+.sub-nav.sidebar dd {
+}
+.sub-nav.sidebar dd a {
+  color: $white;
+  padding-left: 0;
+  display: inline-block;
+}
+
+//Sidenav
+.sub-nav.sidebar {
+  background: $blue;
+  padding: 1em .5em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  
+
+  @media #{$large-up} { 
+    width: 200px;
+    text-align: left;
+  }
+
+  dd {
+    width: 20%;
+
+    @media #{$large-up} { 
+      width: auto;
+    }
+
+    a {
+      padding: .5em 1em;
+    }
+  }
+  dd.active a {
+    background: $white;
+    color: $blue;
+  }
+}
+[data-magellan-expedition] {
+  min-width: 0;
+  @media #{$large-up} { 
+    min-width: 200px;
+  }
+
+  background: none;
+}
+
+// Footer
+#footer {
+  background: $black;
+}
+.footerHeader {
+  color: $darkBlue;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.side-nav.footer {
+  text-align: center;
+
+  a {
+    color: $darkestBlue;
+    font-weight: 300;
+
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
+.sub-nav.footer {
+  margin-top: 1em;
+
+  dd {
+    float: right;
+  }
+  a {
+    color: $darkGray; 
+  }
+}
+.footerLogo {
+  display: block;
+  margin: 0 auto;
+}
+
+// Buttons
+a:hover.button, button a:hover {
+  text-decoration: none;
+}
+button, .button {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+button.success, .button.success {
+  color:$blue;
+}
+
+// Utility
+.centered {
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+.italic {
+  font-style: italic;
+}
+
+// Type
+h1, h1.subheader, h2, h2.subheader {
+  font-weight: 300;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.subheader {
+  font-style: italic;
+}
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  margin: 3em auto;
+}
+
+.orLearn {
+  padding: 0 auto;
+  margin: .5em auto;
+}
+.cta {
+  margin-bottom: 0;
+}
+
+// Homepage
+h2.home-header {
+  font-size: rem-calc(48px);
+}
+#splash {
+  background: url('../images/splashPattern.jpg');
+  padding-bottom:80px; 
+}
+.splashText {
+  color: $white;
+  text-align: center;
+}
+h1.splashText {
+  font-size: 72px;
+  font-weight: 500;
+}
+h2.splashText {
+  font-weight: 300;
+  font-size: 36px;
+}
+.splashButtonWhite {
+  @include button;
+  color: $blue;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 24px;
+  background: $white;
+  margin: 0 auto;
+  margin-top: -40px;
+  padding: 1em 1em;
+  display: block;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  border: 2px solid #DFE7EA;
+
+  &:hover {
+    background: #DFE7EA;
+    color: $darkBlue;
+    border: 2px solid #CAD5D8;
+    text-decoration: none;
+  }
+}
+#getDNT {
+  padding-top:2em; 
+}
+.splashBrowser {
+}
+.splashChrome, .splashFirefox, .splashSafari, .splashOpera, .splashIE {
+  display: inline-block;
+}
+.splashChrome {
+  background: url('../images/flatBrowserIcons.png') no-repeat -7px -3px;
+  width: 93px;
+  height: 94px;
+}
+.splashFirefox {
+  background: url('../images/flatBrowserIcons.png') no-repeat -107px -8px;
+  width: 94px;
+  height: 85px;
+}
+.splashSafari {
+  background: url('../images/flatBrowserIcons.png') no-repeat -208px -3px;
+  width: 88px;
+  height: 94px;
+}
+.splashOpera {
+  background: url('../images/flatBrowserIcons.png') no-repeat -304px -3px;
+  width: 88px;
+  height: 94px;
+}
+.splashIE {
+  background: url('../images/flatBrowserIcons.png') no-repeat -400px -3px;
+  width: 96px;
+  height: 94px;
+}
+#whatsTracking {
+  background: $blue;
+  color:$white;
+
+  h2 {
+    color: $white;
+  }
+}
+#masking {
+  background: $lighterBlue;
+}
+#blocking {
+  background: $darkerBlue;
+  color: $lightestBlue;
+
+  h2 {
+    color: $lightestBlue;
+  }
+}
+.home-header.upsell {
+  text-align: center;
+  font-size: rem-calc(56px);
+}
+
+
+// Support
+img.support {
+  width: 75%;
+  height: 75%;
+  display: block;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+.dntFaq {
+  text-align: center;
+
+  img {
+    margin: 1em auto;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+.accordion a {
+  text-decoration: none;
+}
+.accordion {
+  margin-bottom: 1.5em;
+}
